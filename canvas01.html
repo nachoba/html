@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello Canvas</title>
+  </head>
+  
+  <body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    
+    <script>
+      // Draw a diagonal line that divides the canvas.
+      var diagonal = document.getElementById("myCanvas");
+      var diagonal_context = diagonal.getContext("2d");
+      diagonal_context.moveTo(0,0);
+      diagonal_context.lineTo(200,100);
+      diagonal_context.stroke();
+      
+      // draw a circle in the center of the canvas
+      var circle = document.getElementById("myCanvas");
+      var circle_context = circle.getContext("2d");
+      circle_context.beginPath();
+      circle_context.arc(95, 50, 40, 0, 2 * Math.PI);
+      circle_context.stroke();
+      
+      // draw a text saying Hello World
+      var texto = document.getElementById("myCanvas");
+      var text_context = texto.getContext("2d");
+      text_context.font = "30px Arial";
+      text_context.fillText("Hola Kumita", 10, 50);
+      
+      /*
+      // draw a circular gradient
+      var gradient = document.getElementById("myCanvas");
+      var context_gradient = gradient.getContext("2d");
+      var grd = context_gradient.createRadialGradient(75, 50, 5, 90, 60, 100);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+      context_gradient.fillStyle = grd;
+      context_gradient.fillRect(10, 10, 150, 80);
+      */
+    </script>
+    
+  </body>
+  
+</html>
